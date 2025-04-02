@@ -1,0 +1,51 @@
+# Nishav Business Solutions - Complete robots.txt
+# Updated: 2023-04-02
+
+# Allow all crawlers with some exceptions
+User-agent: *
+Allow: /
+
+# Block access to backend API, assets, and internal folders
+Disallow: /api/
+Disallow: /css/min/
+Disallow: /js/min/
+Disallow: /attached_assets/
+Disallow: /server/
+Disallow: /.git/
+Disallow: /*.json$
+Disallow: /*.ts$
+Disallow: /*.tsx$
+Disallow: /*.js.map$
+Disallow: /*.css.map$
+
+# Crawl delay for better server performance
+Crawl-delay: 10
+
+# Special instructions for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 5
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 5
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 5
+
+# Block aggressive crawlers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: Barkrowler
+Disallow: /
+
+# Sitemap declaration
+Sitemap: https://nishavbusiness.com/sitemap.xml
