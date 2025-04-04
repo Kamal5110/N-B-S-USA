@@ -65,7 +65,7 @@ const Header = () => {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <img 
-                src="/images/Nishav_Business_Solutions logo.png" 
+                src="/images/nishav_business_solutions_logo.png" 
                 alt="Nishav Business Solutions Logo" 
                 className={`w-auto transition-all duration-300 ${isScrolled ? 'h-12' : 'h-16'}`}
                 width="200" 
@@ -73,7 +73,7 @@ const Header = () => {
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.onerror = null; // Prevent infinite loop
-                  target.src = "/images/Nishav New Logo.jpeg";
+                  target.src = "/images/nishav_new_logo.jpeg";
                 }}
               />
             </Link>
@@ -117,7 +117,7 @@ const Header = () => {
             </nav>
             
             <div>
-              <Link href="/book-meeting" className="bg-[var(--accent)] text-[var(--primary)] px-6 py-2 rounded-md font-bold hover:bg-[var(--accent)]/90 transition duration-300 shadow-md">
+              <Link href="/book-meeting" className="bg-[var(--accent)] text-white px-6 py-2 rounded-md font-bold hover:bg-[var(--accent)]/90 transition duration-300 shadow-md whitespace-nowrap">
                 Book a Meeting
               </Link>
             </div>
@@ -203,7 +203,7 @@ const Header = () => {
             <div className="pt-6 mt-4 border-t border-gray-200">
               <Link 
                 href="/book-meeting" 
-                className="bg-[var(--accent)] text-white w-full block text-center py-4 px-6 rounded-lg font-bold text-lg shadow-md
+                className="bg-[var(--accent)] text-white w-full block text-center py-3 px-6 rounded-md font-bold text-lg shadow-md
                   active:transform active:scale-95 hover:bg-[var(--accent)]/90 transition-all duration-300"
                 onTouchStart={handleLinkTouchStart}
                 onTouchEnd={handleLinkTouchEnd}

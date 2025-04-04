@@ -572,6 +572,89 @@ Options -SymLinksIfOwnerMatch
 }
 
 // Main function
+/**
+ * Copy root files to dist directory for deployment
+ */
+function copyRootFiles() {
+  console.log('Copying root files for deployment...');
+  
+  // Files in the root directory that should be copied
+  const rootFiles = [
+    'generated-icon.png',
+    // Add other root files that need to be copied here
+  ];
+  
+  const rootDir = path.resolve(__dirname, '..');
+  const distPublicDir = path.resolve(rootDir, 'dist/public');
+  
+  // Make sure destination directory exists
+  createDirIfNotExists(distPublicDir);
+  
+  // Copy each file
+  for (const file of rootFiles) {
+    const sourcePath = path.join(rootDir, file);
+    const destPath = path.join(distPublicDir, file);
+    
+    if (fs.existsSync(sourcePath)) {
+      try {
+        fs.copyFileSync(sourcePath, destPath);
+        console.log(`Copied: ${sourcePath} -> ${destPath}`);
+      } catch (err) {
+        console.error(`Error copying file ${sourcePath}:`, err);
+      }
+    } else {
+      console.warn(`Warning: Root file not found: ${sourcePath}`);
+    }
+  }
+}
+
+/**
+ * Copy attached assets to images directory
+ */
+function copyAttachedAssets() {
+  console.log('Copying attached assets to images directory...');
+  
+  const rootDir = path.resolve(__dirname, '..');
+  const sourceDir = path.resolve(rootDir, 'attached_assets');
+  const destDir = path.resolve(rootDir, 'dist/public/images');
+  
+  // Skip if source directory doesn't exist
+  if (!fs.existsSync(sourceDir)) {
+    console.warn(`Warning: attached_assets directory not found: ${sourceDir}`);
+    return;
+  }
+  
+  // Create destination directory if it doesn't exist
+  createDirIfNotExists(destDir);
+  
+  // Copy all files from attached_assets to dist/public/images
+  const files = fs.readdirSync(sourceDir);
+  let copiedCount = 0;
+  
+  for (const file of files) {
+    // Skip hidden files
+    if (file.startsWith('.')) {
+      continue;
+    }
+    
+    const sourcePath = path.join(sourceDir, file);
+    const destPath = path.join(destDir, file);
+    
+    // Only copy files, not directories
+    if (fs.statSync(sourcePath).isFile()) {
+      try {
+        fs.copyFileSync(sourcePath, destPath);
+        console.log(`Copied: ${sourcePath} -> ${destPath}`);
+        copiedCount++;
+      } catch (err) {
+        console.error(`Error copying file ${sourcePath}:`, err);
+      }
+    }
+  }
+  
+  console.log(`Copied ${copiedCount} files from attached_assets to dist/public/images`);
+}
+
 async function optimize() {
   console.log('Starting optimization process...');
   
@@ -592,6 +675,12 @@ async function optimize() {
   
   // Add cache control headers
   addCacheControlHeaders();
+  
+  // Copy root files for deployment
+  copyRootFiles();
+  
+  // Copy attached assets to images directory
+  copyAttachedAssets();
   
   console.log('Optimization completed!');
   console.log('To use the optimized files, reference them in your HTML as:');

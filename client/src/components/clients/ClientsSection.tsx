@@ -1,6 +1,8 @@
 import { clients, testimonials } from "@/lib/data";
 import { motion } from "framer-motion";
 import OptimizedImage from '@/components/common/OptimizedImage';
+import { assetPath } from '@/config';
+import { useState, useEffect } from 'react';
 
 const ClientsSection = () => {
   return (
@@ -45,9 +47,13 @@ const ClientsSection = () => {
                     alt={`${client.name} logo`} 
                     className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
                     loading="lazy"
+                    width={150}
+                    height={80}
                     onError={(e) => {
                       console.log(`Error loading client logo: ${client.logo}`);
-                      e.currentTarget.src = "/images/placeholder.svg";
+                      const target = e.target as HTMLImageElement;
+                      target.onerror = null; // Prevent infinite loop
+                      target.src = assetPath("images/placeholder.svg");
                     }}
                   />
                 </div>

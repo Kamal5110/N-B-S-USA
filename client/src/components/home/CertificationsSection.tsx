@@ -1,19 +1,20 @@
 import { motion } from 'framer-motion';
 import OptimizedImage from '@/components/common/OptimizedImage';
+import { assetPath } from '@/config';
 
 const CertificationsSection = () => {
   const certifications = [
     {
       name: 'ISO 9001:2015',
       description: 'Quality Management System',
-      imageSrc: '/images/iso 9001.png',
-      fallbackSrc: '/images/placeholder.svg',
+      imageSrc: assetPath('images/iso_9001.png'),
+      fallbackSrc: assetPath('images/placeholder.svg'),
     },
     {
       name: 'ISO 27001:2013',
       description: 'Information Security Management',
-      imageSrc: '/images/iso 27001.png',
-      fallbackSrc: '/images/placeholder.svg',
+      imageSrc: assetPath('images/iso_27001.png'),
+      fallbackSrc: assetPath('images/placeholder.svg'),
     }
   ];
 

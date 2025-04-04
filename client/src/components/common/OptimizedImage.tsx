@@ -1,5 +1,6 @@
 import { useState, useEffect, memo, useMemo } from 'react';
 import { cn } from '@/lib/utils';
+import { assetPath } from '@/config';
 
 interface OptimizedImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string;
@@ -62,16 +63,25 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   // Remove fetchPriority from props destructuring to avoid React warnings
   ...props
 }) => {
+  // Process paths with assetPath helper for GitHub Pages compatibility
+  const processedSrc = src.startsWith('http') ? src : assetPath(src);
+  const processedFallbackSrc = fallbackSrc.startsWith('http') ? fallbackSrc : assetPath(fallbackSrc);
+  const processedWebpSrc = explicitWebpSrc && !explicitWebpSrc.startsWith('http') ? assetPath(explicitWebpSrc) : explicitWebpSrc;
+  const processedAvifSrc = avifSrc && !avifSrc.startsWith('http') ? assetPath(avifSrc) : avifSrc;
+  
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
-  const [currentSrc, setCurrentSrc] = useState(src);
+  const [currentSrc, setCurrentSrc] = useState(processedSrc);
   
   // Auto-generate WebP URL if not explicitly provided
   const webpSrc = useMemo(() => {
-    if (explicitWebpSrc) return explicitWebpSrc;
+    if (processedWebpSrc) return processedWebpSrc;
     if (disableAutoWebp) return undefined;
-    return getWebpUrl(src);
-  }, [src, explicitWebpSrc, disableAutoWebp]);
+    
+    // For auto-generated WebP, we need to apply the assetPath after generating the WebP URL
+    const webpUrl = getWebpUrl(src);
+    return webpUrl.startsWith('http') ? webpUrl : assetPath(webpUrl);
+  }, [src, processedWebpSrc, disableAutoWebp]);
 
   // Enhance alt text with keywords for SEO if not already present
   const enhancedAlt = useMemo(() => {
@@ -88,8 +98,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     // Reset states when src changes
     setLoaded(false);
     setError(false);
-    setCurrentSrc(src);
-  }, [src]);
+    setCurrentSrc(processedSrc);
+  }, [processedSrc]);
 
   const handleLoad = () => {
     setLoaded(true);
@@ -97,10 +107,26 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   const handleError = () => {
     console.log(`Image loading error: ${currentSrc}`);
+    
+    // If we're already on the fallback path, mark as error and don't try again
+    if (currentSrc === processedFallbackSrc) {
+      setError(true);
+      return;
+    }
+    
+    // Try direct path (with leading slash) if the relative path failed
+    if (currentSrc === processedSrc && !currentSrc.startsWith('http')) {
+      const directSrc = '/images/' + src.split('/').pop();
+      console.log(`Trying direct path: ${directSrc}`);
+      setCurrentSrc(directSrc);
+      return;
+    }
+    
+    // Final fallback to placeholder
     setError(true);
-    if (currentSrc !== fallbackSrc && fallbackSrc) {
-      console.log(`Falling back to: ${fallbackSrc}`);
-      setCurrentSrc(fallbackSrc);
+    if (processedFallbackSrc) {
+      console.log(`Falling back to: ${processedFallbackSrc}`);
+      setCurrentSrc(processedFallbackSrc);
     }
   };
 
@@ -115,7 +141,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const simplePlaceholder = !isAboveTheFold && !loaded;
   
   // Determine if we should use picture element with multiple formats
-  const hasPictureFormats = webpSrc || avifSrc;
+  const hasPictureFormats = webpSrc || processedAvifSrc;
   
   return (
     <div 
@@ -139,7 +165,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       {hasPictureFormats ? (
         <picture>
           {/* AVIF format - best compression/quality ratio but less support */}
-          {avifSrc && <source type="image/avif" srcSet={avifSrc} sizes={sizes} />}
+          {processedAvifSrc && <source type="image/avif" srcSet={processedAvifSrc} sizes={sizes} />}
           
           {/* WebP format - good compression/quality with better support */}
           {webpSrc && <source type="image/webp" srcSet={webpSrc} sizes={sizes} />}

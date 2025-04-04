@@ -1,3 +1,5 @@
+import { assetPath } from "@/config";
+
 export interface Feature {
   icon: string;
   title: string;
@@ -878,92 +880,92 @@ export const clients: Client[] = [
   {
     id: 1,
     name: "Parceldeck",
-    logo: "/images/Parceldeck.jpg"
+    logo: assetPath("images/parceldeck.jpg")
   },
   {
     id: 2,
     name: "Shreehari Education",
-    logo: "/images/Shreehari Education.jpg"
+    logo: assetPath("images/shreehari_education.jpg")
   },
   {
     id: 3,
     name: "Radiance Technologies",
-    logo: "/images/Radiance Technologies.jpg"
+    logo: assetPath("images/radiance_technologies.jpg")
   },
   {
     id: 4,
     name: "Maintedge Techlabs",
-    logo: "/images/Maintedge Techlabs.jpg"
+    logo: assetPath("images/maintedge_techlabs.jpg")
   },
   {
     id: 5,
     name: "AavGO",
-    logo: "/images/AavGO 11.png"
+    logo: assetPath("images/aavgo_11.png")
   },
   {
     id: 6,
     name: "TeroTAM Technolabs",
-    logo: "/images/TeroTAM Technolabs.jpg"
+    logo: assetPath("images/terotam_technolabs.jpg")
   },
   {
     id: 7,
     name: "Astics Techlabs",
-    logo: "/images/Astics Techlabs.jpg"
+    logo: assetPath("images/astics_techlabs.jpg")
   },
   {
     id: 8,
     name: "Abilities India Pistons & Rings",
-    logo: "/images/Abilities India Pistons & Rings.png"
+    logo: assetPath("images/abilities_india_pistons_rings.png")
   },
   {
     id: 9,
     name: "Joyam",
-    logo: "/images/Joyam.png"
+    logo: assetPath("images/joyam.png")
   },
   {
     id: 10,
     name: "Oizom",
-    logo: "/images/Oizom.jpg"
+    logo: assetPath("images/oizom.jpg")
   },
   {
     id: 11,
     name: "Fitcast",
-    logo: "/images/Fitcast.jpg"
+    logo: assetPath("images/fitcast.jpg")
   },
   {
     id: 12,
     name: "Comptech Equipments",
-    logo: "/images/Comptech Equipments.jpg"
+    logo: assetPath("images/comptech_equipments.jpg")
   },
   {
     id: 13,
     name: "QLTech",
-    logo: "/images/QLTech.jpg"
+    logo: assetPath("images/qltech.jpg")
   },
   {
     id: 14,
     name: "Fuji Silvertech",
-    logo: "/images/Fuji Silvertech.jpg"
+    logo: assetPath("images/fuji_silvertech.jpg")
   },
   {
     id: 15,
     name: "Webosphere",
-    logo: "/images/Webosphere.jpg"
+    logo: assetPath("images/webosphere.jpg")
   },
   {
     id: 16,
     name: "TDC Contracting",
-    logo: "/images/TDC Contracting.jpg"
+    logo: assetPath("images/tdc_contracting.jpg")
   },
   {
     id: 17,
     name: "The Leela Corpo",
-    logo: "/images/The Leela Corpo.jpg"
+    logo: assetPath("images/the_leela_corpo.jpg")
   },
   {
     id: 18,
     name: "Kalintis",
-    logo: "/images/Kalintis logo.jpg"
+    logo: assetPath("images/kalintis_logo.jpg")
   }
 ];
 
