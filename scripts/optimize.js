@@ -684,8 +684,8 @@ async function optimize() {
   
   console.log('Optimization completed!');
   console.log('To use the optimized files, reference them in your HTML as:');
-  console.log('- CSS: <link rel="stylesheet" href="/css/min/styles.min.css">');
-  console.log('- JS: <script src="/js/min/utilities.min.js"></script>');
+  console.log('- CSS: <link rel="stylesheet" href="css/min/styles.min.css">');
+  console.log('- JS: <script src="js/min/utilities.min.js"></script>');
   console.log('- Images: Consider using the OptimizedImage component for automatic WebP support');
 }
 
