@@ -89,5 +89,46 @@ function copyAttachedAssets() {
   }
 }
 
-// Execute the copy process
+/**
+ * Copy routing files to client/public directory
+ * This includes files needed for SPA routing on different hosting platforms
+ */
+function copyRoutingFiles() {
+  console.log('Copying SPA routing files to public directory...');
+  
+  const rootDir = path.resolve(__dirname, '..');
+  const sourceDir = path.resolve(rootDir, 'client/public');
+  const routingFiles = [
+    '.htaccess',
+    '404.html',
+    '_redirects',
+    'vercel.json'
+  ];
+  
+  let copiedCount = 0;
+  
+  for (const file of routingFiles) {
+    const sourcePath = path.join(sourceDir, file);
+    
+    // Skip if file doesn't exist
+    if (!fs.existsSync(sourcePath)) {
+      console.warn(`Warning: Routing file not found: ${sourcePath}`);
+      continue;
+    }
+    
+    try {
+      // Make sure the file has correct permissions
+      fs.chmodSync(sourcePath, 0o644);
+      copiedCount++;
+      console.log(`Set permissions for: ${file}`);
+    } catch (err) {
+      console.error(`Error setting permissions for ${sourcePath}:`, err);
+    }
+  }
+  
+  console.log(`Processed ${copiedCount} routing files for SPA navigation`);
+}
+
+// Execute the copy processes
 copyAttachedAssets();
+copyRoutingFiles();
