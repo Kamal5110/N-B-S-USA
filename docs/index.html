@@ -180,5 +180,12 @@
   
   <!-- Minified utilities script -->
   <script defer src="js/min/nishav-utilities.min.js"></script>
+  <script>
+    const redirect = sessionStorage.redirect;
+    if (redirect) {
+      sessionStorage.removeItem("redirect");
+      history.replaceState(null, "", redirect);
+    }
+  </script>
 </body>
 </html>
