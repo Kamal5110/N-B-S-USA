@@ -20,6 +20,9 @@ const Blogs = lazy(() => import("@/pages/Blogs"));
 const BlogPost = lazy(() => import("@/pages/BlogPost"));
 const Contact = lazy(() => import("@/pages/Contact"));
 const BookMeeting = lazy(() => import("@/pages/BookMeeting"));
+const PrivacyPolicy = lazy(() => import("@/pages/PrivacyPolicy"));
+const TermsOfService = lazy(() => import("@/pages/TermsOfService"));
+const Sitemap = lazy(() => import("@/pages/Sitemap"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 // Loading fallback for page components
@@ -95,6 +98,27 @@ function Router() {
           <PageTransition>
             <Suspense fallback={<PageLoading />}>
               <BookMeeting />
+            </Suspense>
+          </PageTransition>
+        </Route>
+        <Route path="/privacy-policy">
+          <PageTransition>
+            <Suspense fallback={<PageLoading />}>
+              <PrivacyPolicy />
+            </Suspense>
+          </PageTransition>
+        </Route>
+        <Route path="/terms-of-service">
+          <PageTransition>
+            <Suspense fallback={<PageLoading />}>
+              <TermsOfService />
+            </Suspense>
+          </PageTransition>
+        </Route>
+        <Route path="/sitemap">
+          <PageTransition>
+            <Suspense fallback={<PageLoading />}>
+              <Sitemap />
             </Suspense>
           </PageTransition>
         </Route>

@@ -108,7 +108,7 @@ const Footer = () => {
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-white/70 text-sm mb-4 md:mb-0">
-              &copy; {new Date().getFullYear()} Nishav Business Solutions. All rights reserved.
+              &copy; {new Date().getFullYear()} Nishav Solutions India Pvt. Ltd. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link href="/privacy-policy" className="text-white/70 hover:text-[var(--accent)] text-sm transition duration-300">Privacy Policy</Link>
