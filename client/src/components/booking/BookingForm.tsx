@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { useMutation } from "@tanstack/react-query";
@@ -46,6 +46,14 @@ const timeOptions = [
 const BookingForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const nameInputRef = useRef<HTMLInputElement>(null);
+  
+  // Auto-focus on the name field when component mounts
+  useEffect(() => {
+    if (nameInputRef.current) {
+      nameInputRef.current.focus();
+    }
+  }, []);
   
   const form = useForm<BookingFormValues>({
     resolver: zodResolver(bookingFormSchema),
@@ -103,6 +111,7 @@ const BookingForm = () => {
                 <FormControl>
                   <Input 
                     {...field} 
+                    ref={nameInputRef}
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)]" 
                     disabled={isSubmitting}
                   />
@@ -238,6 +247,7 @@ const BookingForm = () => {
                   <Textarea 
                     {...field} 
                     rows={3}
+                    value={field.value || ""}
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)]" 
                     disabled={isSubmitting}
                   />

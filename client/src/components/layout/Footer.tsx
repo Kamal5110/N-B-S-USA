@@ -56,12 +56,13 @@ const Footer = () => {
           <div>
             <h4 className="text-xl font-bold mb-6">Our Services</h4>
             <ul className="space-y-3">
-              <li><Link href="/services" className="text-white/80 hover:text-[var(--accent)] transition duration-300">Tax Planning & Preparation</Link></li>
-              <li><Link href="/services" className="text-white/80 hover:text-[var(--accent)] transition duration-300">Bookkeeping & Accounting</Link></li>
-              <li><Link href="/services" className="text-white/80 hover:text-[var(--accent)] transition duration-300">Audit & Assurance</Link></li>
-              <li><Link href="/services" className="text-white/80 hover:text-[var(--accent)] transition duration-300">Business Advisory</Link></li>
-              <li><Link href="/services" className="text-white/80 hover:text-[var(--accent)] transition duration-300">Payroll Services</Link></li>
-              <li><Link href="/services" className="text-white/80 hover:text-[var(--accent)] transition duration-300">Virtual CFO Services</Link></li>
+              <li><Link href="/service/1" className="text-white/80 hover:text-[var(--accent)] transition duration-300">Tax Preparation & Planning</Link></li>
+              <li><Link href="/service/2" className="text-white/80 hover:text-[var(--accent)] transition duration-300">Bookkeeping & Accounting</Link></li>
+              <li><Link href="/service/3" className="text-white/80 hover:text-[var(--accent)] transition duration-300">Audit & Assurance</Link></li>
+              <li><Link href="/service/4" className="text-white/80 hover:text-[var(--accent)] transition duration-300">Data Entry Specialist</Link></li>
+              <li><Link href="/service/7" className="text-white/80 hover:text-[var(--accent)] transition duration-300">Payroll Services</Link></li>
+              <li><Link href="/service/5" className="text-white/80 hover:text-[var(--accent)] transition duration-300">Virtual CFO Services</Link></li>
+              <li><Link href="/service/6" className="text-white/80 hover:text-[var(--accent)] transition duration-300">Sr. Accountant Services</Link></li>
             </ul>
           </div>
           
@@ -98,7 +99,8 @@ const Footer = () => {
                 <i className="fas fa-clock mt-1 mr-3"></i>
                 <div>
                   Monday - Friday: 10:00 AM - 7:00 PM<br />
-                  Saturday & Sunday: Closed
+                  Saturday: 10:00 AM - 2:00 PM<br />
+                
                 </div>
               </li>
             </ul>

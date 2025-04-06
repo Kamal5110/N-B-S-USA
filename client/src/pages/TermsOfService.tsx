@@ -37,12 +37,13 @@ const TermsOfService = () => {
               Nishav Solutions provides offshore accounting, bookkeeping, and tax preparation services to accounting firms and CPAs in the United States. Our services include but are not limited to:
             </p>
             <ul className="list-disc pl-6 mt-2">
-              <li>Tax Planning & Preparation</li>
-              <li>Bookkeeping & Accounting</li>
-              <li>Audit & Assurance</li>
-              <li>Business Advisory</li>
-              <li>Payroll Services</li>
-              <li>Virtual CFO Services</li>
+              <li><a href="/service/1" className="text-[var(--primary)] hover:text-[var(--accent)] transition-colors">Tax Preparation & Planning</a> - Comprehensive tax services to minimize liability and ensure compliance with current tax laws.</li>
+              <li><a href="/service/2" className="text-[var(--primary)] hover:text-[var(--accent)] transition-colors">Bookkeeping & Accounting</a> - Accurate financial record-keeping and reporting to support informed business decisions.</li>
+              <li><a href="/service/3" className="text-[var(--primary)] hover:text-[var(--accent)] transition-colors">Audit & Assurance</a> - Independent verification of financial statements to enhance credibility and identify opportunities.</li>
+              <li><a href="/service/4" className="text-[var(--primary)] hover:text-[var(--accent)] transition-colors">Data Entry Specialist</a> - Meticulous data entry services to ensure accurate financial records and database management.</li>
+              <li><a href="/service/7" className="text-[var(--primary)] hover:text-[var(--accent)] transition-colors">Payroll Services</a> - Comprehensive payroll processing and management solutions for businesses of all sizes.</li>
+              <li><a href="/service/5" className="text-[var(--primary)] hover:text-[var(--accent)] transition-colors">Virtual CFO Services</a> - Executive-level financial guidance without the full-time cost of an in-house CFO.</li>
+              <li><a href="/service/6" className="text-[var(--primary)] hover:text-[var(--accent)] transition-colors">Sr. Accountant Services</a> - Advanced accounting expertise for complex financial needs and high-level reporting.</li>
             </ul>
           </section>
 
