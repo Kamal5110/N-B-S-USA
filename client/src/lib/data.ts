@@ -944,8 +944,8 @@ export const clients: Client[] = [
   },
   {
     id: 14,
-    name: "Fuji Silvertech",
-    logo: assetPath("images/fuji_silvertech.jpg")
+    name: "System Protection",
+    logo: assetPath("images/system_protection.png")
   },
   {
     id: 15,

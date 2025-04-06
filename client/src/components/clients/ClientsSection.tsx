@@ -1,8 +1,6 @@
 import { clients, testimonials } from "@/lib/data";
 import { motion } from "framer-motion";
-import OptimizedImage from '@/components/common/OptimizedImage';
-import { assetPath } from '@/config';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const ClientsSection = () => {
   return (
@@ -42,20 +40,186 @@ const ClientsSection = () => {
             >
               <div className="flex flex-col items-center justify-center h-full w-full text-center">
                 <div className="h-20 flex items-center justify-center mb-3">
-                  <img 
-                    src={client.logo} 
-                    alt={`${client.name} logo`} 
-                    className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
-                    loading="lazy"
-                    width={150}
-                    height={80}
-                    onError={(e) => {
-                      console.log(`Error loading client logo: ${client.logo}`);
-                      const target = e.target as HTMLImageElement;
-                      target.onerror = null; // Prevent infinite loop
-                      target.src = assetPath("images/placeholder.svg");
-                    }}
-                  />
+                  {client.name === "System Protection" && (
+                    <img 
+                      src="/images/system_protection.png"
+                      alt="System Protection logo" 
+                      className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
+                      loading="lazy"
+                      width={150}
+                      height={80}
+                    />
+                  )}
+                  {client.name === "AavGO" && (
+                    <img 
+                      src="/images/aavgo_11.png"
+                      alt="AavGO logo" 
+                      className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
+                      loading="lazy"
+                      width={150}
+                      height={80}
+                    />
+                  )}
+                  {client.name === "Abilities India Pistons & Rings" && (
+                    <img 
+                      src="/images/abilities_india_pistons_rings.png"
+                      alt="Abilities India Pistons & Rings logo" 
+                      className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
+                      loading="lazy"
+                      width={150}
+                      height={80}
+                    />
+                  )}
+                  {client.name === "Astics Techlabs" && (
+                    <img 
+                      src="/images/astics_techlabs.jpg"
+                      alt="Astics Techlabs logo" 
+                      className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
+                      loading="lazy"
+                      width={150}
+                      height={80}
+                    />
+                  )}
+                  {client.name === "TeroTAM Technolabs" && (
+                    <img 
+                      src="/images/terotam_technolabs.jpg"
+                      alt="TeroTAM Technolabs logo" 
+                      className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
+                      loading="lazy"
+                      width={150}
+                      height={80}
+                    />
+                  )}
+                  {client.name === "Joyam" && (
+                    <img 
+                      src="/images/joyam.png"
+                      alt="Joyam logo" 
+                      className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
+                      loading="lazy"
+                      width={150}
+                      height={80}
+                    />
+                  )}
+                  {client.name === "Oizom" && (
+                    <img 
+                      src="/images/oizom.jpg"
+                      alt="Oizom logo" 
+                      className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
+                      loading="lazy"
+                      width={150}
+                      height={80}
+                    />
+                  )}
+                  {client.name === "Fitcast" && (
+                    <img 
+                      src="/images/fitcast.jpg"
+                      alt="Fitcast logo" 
+                      className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
+                      loading="lazy"
+                      width={150}
+                      height={80}
+                    />
+                  )}
+                  {client.name === "Comptech Equipments" && (
+                    <img 
+                      src="/images/comptech_equipments.jpg"
+                      alt="Comptech Equipments logo" 
+                      className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
+                      loading="lazy"
+                      width={150}
+                      height={80}
+                    />
+                  )}
+                  {client.name === "Shreehari Education" && (
+                    <img 
+                      src="/images/shreehari_education.jpg"
+                      alt="Shreehari Education logo" 
+                      className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
+                      loading="lazy"
+                      width={150}
+                      height={80}
+                    />
+                  )}
+                  {client.name === "Parceldeck" && (
+                    <img 
+                      src="/images/parceldeck.jpg"
+                      alt="Parceldeck logo" 
+                      className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
+                      loading="lazy"
+                      width={150}
+                      height={80}
+                    />
+                  )}
+                  {client.name === "Maintedge Techlabs" && (
+                    <img 
+                      src="/images/maintedge_techlabs.jpg"
+                      alt="Maintedge Techlabs logo" 
+                      className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
+                      loading="lazy"
+                      width={150}
+                      height={80}
+                    />
+                  )}
+                  {client.name === "Radiance Technologies" && (
+                    <img 
+                      src="/images/radiance_technologies.jpg"
+                      alt="Radiance Technologies logo" 
+                      className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
+                      loading="lazy"
+                      width={150}
+                      height={80}
+                    />
+                  )}
+                  {client.name === "QLTech" && (
+                    <img 
+                      src="/images/qltech.jpg"
+                      alt="QLTech logo" 
+                      className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
+                      loading="lazy"
+                      width={150}
+                      height={80}
+                    />
+                  )}
+                  {client.name === "Webosphere" && (
+                    <img 
+                      src="/images/webosphere.jpg"
+                      alt="Webosphere logo" 
+                      className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
+                      loading="lazy"
+                      width={150}
+                      height={80}
+                    />
+                  )}
+                  {client.name === "TDC Contracting" && (
+                    <img 
+                      src="/images/tdc_contracting.jpg"
+                      alt="TDC Contracting logo" 
+                      className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
+                      loading="lazy"
+                      width={150}
+                      height={80}
+                    />
+                  )}
+                  {client.name === "The Leela Corpo" && (
+                    <img 
+                      src="/images/the_leela_corpo.jpg"
+                      alt="The Leela Corpo logo" 
+                      className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
+                      loading="lazy"
+                      width={150}
+                      height={80}
+                    />
+                  )}
+                  {client.name === "Kalintis" && (
+                    <img 
+                      src="/images/kalintis_logo.jpg"
+                      alt="Kalintis logo" 
+                      className="max-h-[80px] w-auto max-w-[150px] object-contain mx-auto" 
+                      loading="lazy"
+                      width={150}
+                      height={80}
+                    />
+                  )}
                 </div>
                 <span className="text-[var(--primary)] text-base font-medium text-center w-full min-h-[3rem] flex items-center justify-center px-1 leading-tight">
                   {client.name}
