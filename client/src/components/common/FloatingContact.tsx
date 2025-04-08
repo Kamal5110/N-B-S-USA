@@ -59,7 +59,7 @@ const FloatingContact = () => {
               {/* US Call */}
               <li>
                 <a 
-                  href="tel:+18001234567"
+                  href="tel:+19172452515"
                   className="flex items-center rounded-md p-2 text-gray-600 transition-colors hover:bg-gray-100"
                 >
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--primary)]/10 text-[var(--primary)]">

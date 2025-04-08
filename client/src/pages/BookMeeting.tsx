@@ -60,7 +60,7 @@ const BookMeeting = () => {
               <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-6">
                 <div className="flex items-center">
                   <i className="fas fa-phone text-[var(--primary)] mr-2"></i>
-                  <span className="font-semibold">+1 (800) 123-4567</span>
+                  <span className="font-semibold">+1 (917) 245-2515</span>
                 </div>
                 <div className="flex items-center">
                   <i className="fas fa-envelope text-[var(--primary)] mr-2"></i>
