@@ -94,7 +94,7 @@ const Home = () => {
                     <div>
                       <h4 className="font-bold text-[var(--primary)] mb-1">Phone Numbers</h4>
                       <p className="text-[var(--darkgray)]">
-                        <span className="font-semibold">US:</span> <a href="tel:+18001234567" className="hover:text-[var(--accent)] transition duration-300">+1 (800) 123-4567</a><br />
+                        <span className="font-semibold">US:</span> <a href="tel:+19172452515" className="hover:text-[var(--accent)] transition duration-300">+1 (917) 245-2515</a><br />
                         <span className="font-semibold">India:</span> <a href="tel:+919649410824" className="hover:text-[var(--accent)] transition duration-300">+(91) - 9649410824</a>
                       </p>
                     </div>
@@ -121,7 +121,7 @@ const Home = () => {
                       <h4 className="font-bold text-[var(--primary)] mb-1">Working Hours</h4>
                       <p className="text-[var(--darkgray)]">
                         Monday - Friday: 10:00 AM - 7:00 PM<br />
-                        Saturday & Sunday: Closed
+                        Saturday: 10:00 AM - 2:00 PM
                       </p>
                     </div>
                   </div>
@@ -175,8 +175,8 @@ const Home = () => {
                   New York, NY 10001
                 </address>
                 <p className="mt-3">
-                  <a href="tel:+18001234567" className="text-primary hover:text-accent transition duration-300">
-                    +1 (800) 123-4567
+                  <a href="tel:+19172452515" className="text-primary hover:text-accent transition duration-300">
+                    +1 (917) 245-2515
                   </a>
                 </p>
               </div>
