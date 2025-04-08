@@ -84,7 +84,7 @@ const Footer = () => {
               <li className="flex items-start">
                 <i className="fas fa-phone-alt mt-1 mr-3"></i>
                 <div>
-                  <div>+1 (800) 123-4567</div>
+                  <div>+1 (917) 245-2515</div>
                   <div>+(91) - 9649410824</div>
                 </div>
               </li>

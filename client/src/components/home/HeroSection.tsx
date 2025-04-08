@@ -14,7 +14,7 @@ const HeroSection = () => {
               Starting at $8.50/Hr | Save Up To 70% Today
             </h2>
             <p className="text-lg md:text-xl text-white/90 mb-8 max-w-lg">
-              <Link href="/about" className="text-white hover:text-white underline transition-colors duration-300">Nishav Business Solutions</Link> helps <strong>CPA firms</strong> save up to 70% on labor costs with our professional <Link href="/services" className="text-white hover:text-white underline transition-colors duration-300">offshore accounting</Link> and <Link href="/services/bookkeeping" className="text-white hover:text-white underline transition-colors duration-300">bookkeeping services</Link>.
+              <Link href="/about" className="text-white hover:text-white underline transition-colors duration-300">Nishav Business Solutions</Link> helps <strong>CPA firms</strong> save up to 70% on labor costs with our professional <Link href="/services" className="text-white hover:text-white underline transition-colors duration-300">offshore accounting</Link> and <Link href="/service/2" className="text-white hover:text-white underline transition-colors duration-300">bookkeeping services</Link>.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link href="/services" className="bg-[var(--accent)] text-[var(--primary)] px-8 py-3 rounded-md font-bold hover:bg-[var(--accent)]/90 transition duration-300 shadow-md text-center">

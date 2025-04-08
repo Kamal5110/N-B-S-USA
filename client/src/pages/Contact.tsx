@@ -20,7 +20,7 @@ const Contact = () => {
               "mainEntity": {
                 "@type": "Organization",
                 "name": "Nishav Business Solutions",
-                "telephone": ["+1 (800) 123-4567", "+(91) - 9649410824"],
+                "telephone": ["+1 (917) 245-2515", "+(91) - 9649410824"],
                 "email": ["contact@nishavbusiness.com", "support@nishavbusiness.com"],
                 "address": [
                   {
@@ -40,7 +40,7 @@ const Contact = () => {
                     "addressCountry": "IN"
                   }
                 ],
-                "openingHours": "Mo,Tu,We,Th,Fr 10:00-19:00"
+                "openingHours": ["Mo,Tu,We,Th,Fr 10:00-19:00", "Sa 10:00-14:00"]
               }
             }
           `}
@@ -94,7 +94,7 @@ const Contact = () => {
                     <div>
                       <h4 className="font-bold text-[var(--primary)] mb-1">Phone Number</h4>
                       <p className="text-[var(--darkgray)]">
-                        <a href="tel:+18001234567" className="hover:text-[var(--accent)] transition duration-300">+1 (800) 123-4567</a><br />
+                        <a href="tel:+19172452515" className="hover:text-[var(--accent)] transition duration-300">+1 (917) 245-2515</a><br />
                         <a href="tel:+919649410824" className="hover:text-[var(--accent)] transition duration-300">+(91) - 9649410824</a>
                       </p>
                     </div>
@@ -123,7 +123,10 @@ const Contact = () => {
                         <time itemProp="openingHours" dateTime="Mo,Tu,We,Th,Fr 10:00-19:00">
                           Monday - Friday: 10:00 AM - 7:00 PM
                         </time><br />
-                        Saturday & Sunday: Closed
+                        <time itemProp="openingHours" dateTime="Sa 10:00-14:00">
+                          Saturday: 10:00 AM - 2:00 PM
+                        </time><br />
+                        
                       </p>
                     </div>
                   </div>
@@ -172,8 +175,8 @@ const Contact = () => {
                   New York, NY 10001
                 </address>
                 <p className="text-[var(--darkgray)]">
-                  <a href="tel:+18001234567" className="hover:text-[var(--accent)] transition duration-300">
-                    <i className="fas fa-phone-alt mr-2"></i>+1 (800) 123-4567
+                  <a href="tel:+19172452515" className="hover:text-[var(--accent)] transition duration-300">
+                    <i className="fas fa-phone-alt mr-2"></i>+1 (917) 245-2515
                   </a>
                 </p>
               </div>
