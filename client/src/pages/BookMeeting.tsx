@@ -157,8 +157,8 @@ const BookMeeting = () => {
                 <i className="fas fa-user text-[var(--primary)]"></i>
               </div>
               <div>
-                <h4 className="font-bold text-[var(--primary)]">Robert Thompson</h4>
-                <p className="text-sm text-[var(--darkgray)]">CEO, Thompson Innovations</p>
+                <h4 className="font-bold text-[var(--primary)]">Arjun Singh</h4>
+                <p className="text-sm text-[var(--darkgray)]">Founder & CEO, Maintedge Techlabs</p>
               </div>
             </div>
           </div>
@@ -192,7 +192,7 @@ const BookMeeting = () => {
                 Contact Us
               </Link>
               <a 
-                href="tel:+18001234567"
+                href="tel:+19172452515"
                 className="bg-[var(--accent)] text-[var(--primary)] px-8 py-3 rounded-md font-bold hover:bg-[var(--accent)]/90 transition duration-300 shadow-md"
               >
                 Call Now
