@@ -25,10 +25,10 @@ const Contact = () => {
                 "address": [
                   {
                     "@type": "PostalAddress",
-                    "streetAddress": "123 Business Avenue, Suite 200",
-                    "addressLocality": "New York",
-                    "addressRegion": "NY",
-                    "postalCode": "10001",
+                    "streetAddress": "30 North Gould Street, Suite R",
+                    "addressLocality": "Sheridan",
+                    "addressRegion": "Wyoming",
+                    "postalCode": "82801",
                     "addressCountry": "US"
                   },
                   {
@@ -76,8 +76,8 @@ const Contact = () => {
                       <h4 className="font-bold text-[var(--primary)] mb-1">Our Locations</h4>
                       <address className="text-[var(--darkgray)] not-italic mb-2">
                         <strong>US Office:</strong><br />
-                        123 Business Avenue, Suite 200<br />
-                        New York, NY 10001
+                        30 North Gould Street, Suite R<br />
+                        Sheridan, Wyoming 82801, (USA)
                       </address>
                       <address className="text-[var(--darkgray)] not-italic">
                         <strong>India Office:</strong><br />
@@ -126,7 +126,7 @@ const Contact = () => {
                         <time itemProp="openingHours" dateTime="Sa 10:00-14:00">
                           Saturday: 10:00 AM - 2:00 PM
                         </time><br />
-                        
+                        Sunday: Closed
                       </p>
                     </div>
                   </div>
@@ -171,8 +171,8 @@ const Contact = () => {
                 </div>
                 <h3 className="text-xl font-bold text-[var(--primary)] mb-3">US Office</h3>
                 <address className="text-[var(--darkgray)] not-italic mb-4">
-                  123 Business Avenue, Suite 200<br />
-                  New York, NY 10001
+                  30 North Gould Street, Suite R<br />
+                  Sheridan, Wyoming 82801, (USA)
                 </address>
                 <p className="text-[var(--darkgray)]">
                   <a href="tel:+19172452515" className="hover:text-[var(--accent)] transition duration-300">
