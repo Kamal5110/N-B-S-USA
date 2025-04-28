@@ -76,8 +76,8 @@ const Home = () => {
                     <div>
                       <h4 className="font-bold text-[var(--primary)] mb-1">US Office</h4>
                       <address className="text-[var(--darkgray)] not-italic">
-                        123 Business Avenue, Suite 200<br />
-                        New York, NY 10001
+                        30 North Gould Street, Suite R<br />
+                        Sheridan, Wyoming 82801, (USA)
                       </address>
                       <h4 className="font-bold text-[var(--primary)] mt-2 mb-1">India Office</h4>
                       <address className="text-[var(--darkgray)] not-italic">
@@ -121,7 +121,8 @@ const Home = () => {
                       <h4 className="font-bold text-[var(--primary)] mb-1">Working Hours</h4>
                       <p className="text-[var(--darkgray)]">
                         Monday - Friday: 10:00 AM - 7:00 PM<br />
-                        Saturday: 10:00 AM - 2:00 PM
+                        Saturday: 10:00 AM - 2:00 PM<br />
+                        Sunday: Closed
                       </p>
                     </div>
                   </div>
@@ -171,8 +172,8 @@ const Home = () => {
               <div className="p-6">
                 <h3 className="text-xl font-bold text-primary">US Office</h3>
                 <address className="text-darkgray not-italic mt-2">
-                  123 Business Avenue, Suite 200<br />
-                  New York, NY 10001
+                  30 North Gould Street, Suite R<br />
+                  Sheridan, Wyoming 82801, (USA)
                 </address>
                 <p className="mt-3">
                   <a href="tel:+19172452515" className="text-primary hover:text-accent transition duration-300">

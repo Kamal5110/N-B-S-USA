@@ -74,8 +74,8 @@ const Footer = () => {
                 <i className="fas fa-map-marker-alt mt-1 mr-3"></i>
                 <div>
                   <strong>US Office:</strong><br />
-                  123 Business Avenue, Suite 200<br />
-                  New York, NY 10001<br /><br />
+                  30 North Gould Street, Suite R<br />
+                  Sheridan, Wyoming 82801, (USA)<br /><br />
                   <strong>India Office:</strong><br />
                   Office No. - 2, 2B Darmanagar, Nr. BOB Bank<br />
                   Sabarmati, Ahmedabad, Gujarat - 380005
@@ -100,7 +100,7 @@ const Footer = () => {
                 <div>
                   Monday - Friday: 10:00 AM - 7:00 PM<br />
                   Saturday: 10:00 AM - 2:00 PM<br />
-                
+                  Sunday: Closed
                 </div>
               </li>
             </ul>

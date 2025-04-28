@@ -28,15 +28,15 @@ const About = () => {
               ],
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "123 Business Avenue, Suite 200",
-                "addressLocality": "New York",
-                "addressRegion": "NY",
-                "postalCode": "10001",
+                "streetAddress": "30 North Gould Street, Suite R",
+                "addressLocality": "Sheridan",
+                "addressRegion": "Wyoming",
+                "postalCode": "82801",
                 "addressCountry": "US"
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+1-800-123-4567",
+                "telephone": "+1 (917) 245-2515",
                 "contactType": "customer service",
                 "email": "contact@nishavbusiness.com"
               },

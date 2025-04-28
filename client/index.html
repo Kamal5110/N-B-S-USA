@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <base href="/" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#2563eb" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <link rel="manifest" href="/manifest.json" />
-  <link rel="icon" href="/generated-icon.png" />
-  <link rel="apple-touch-icon" href="/generated-icon.png" />
-  <link rel="shortcut icon" type="image/png" href="/generated-icon.png" />
+  
+  <!-- Script for handling SPA routing on refresh in production -->
+  <script>
+    // This script checks if we're being redirected from a 404 page with URL parameters
+    (function() {
+      // Parse the URL
+      var location = window.location;
+      var search = location.search;
+      var hash = location.hash;
+      
+      // Check for the "p" parameter from our 404.html redirect
+      var rewrittenUrl = search.match(/\?p=\/([^&]*)((?:&(?:[^&=]+=[^&]*)?)*)(#.*)?/);
+      
+      if (rewrittenUrl) {
+        // We have a redirect from 404.html
+        var pathSegments = rewrittenUrl[1];
+        var queryString = rewrittenUrl[2] && rewrittenUrl[2].length > 0 
+          ? rewrittenUrl[2].replace(/&q=/, '?').replace(/~and~/g, '&') 
+          : '';
+        var fragment = rewrittenUrl[3] || '';
+        
+        // Rewrite the URL
+        if (pathSegments || queryString || fragment) {
+          history.replaceState(
+            null,
+            null,
+            '/nishav.github.io/' + pathSegments +
+            queryString.replace(/^\?&/, '?') +
+            fragment
+          );
+        }
+      }
+    })();
+  </script>
+  <link rel="manifest" href="/nishav.github.io/manifest.json" />
+  <link rel="icon" href="/nishav.github.io/generated-icon.png" />
+  <link rel="apple-touch-icon" href="/nishav.github.io/generated-icon.png" />
+  <link rel="shortcut icon" type="image/png" href="/nishav.github.io/generated-icon.png" />
   <title>Offshore Accounting & Bookkeeping for CPAs | Nishav Solutions</title>
   <meta name="description" content="Nishav Business Solutions offers expert offshore accounting, bookkeeping & tax outsourcing for CPA firms. Save 70% on costs with our trusted services." />
   <meta name="keywords" content="Offshore Accounting Services, Accounting Outsourcing for CPA Firms, Bookkeeping Outsourcing, Tax Preparation Services, Payroll Processing for CPAs, Virtual Accounting Experts, Financial Reporting Services, CPA Firm Accounting Solutions, Affordable Offshore Accounting, Remote Bookkeeping Services, US Tax & Accounting Outsourcing, Professional Accounting Support, Outsourced Accounting for CPAs, Reduce Accounting Costs" />
@@ -22,13 +55,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://nishavbusiness.com" />
   <link rel="canonical" href="https://nishavbusiness.com" />
-  <meta property="og:image" content="/generated-icon.png" />
+  <meta property="og:image" content="/nishav.github.io/generated-icon.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Offshore Accounting & Bookkeeping for CPAs | Nishav Solutions" />
   <meta name="twitter:description" content="Nishav Business Solutions offers expert offshore accounting, bookkeeping & tax outsourcing for CPA firms. Save 70% on costs with our trusted services." />
   
   <!-- Preload critical assets -->
-  <link rel="preload" href="/generated-icon.png" as="image" />
+  <link rel="preload" href="/nishav.github.io/generated-icon.png" as="image" />
   
   <!-- Critical CSS -->
   <style>
@@ -51,15 +84,15 @@
       "description": "Professional offshore accounting, bookkeeping, tax preparation, and payroll outsourcing services for US CPA firms, helping businesses save up to 70% on labor costs. ISO certified company with dedicated staff for your accounting needs.",
       "url": "https://nishavbusiness.com",
       "logo": "https://nishavbusiness.com/logo.png",
-      "telephone": ["+1 (800) 123-4567", "+(91) - 9649410824"],
+      "telephone": ["+1 (917) 245-2515", "+(91) - 9649410824"],
       "email": ["contact@nishavbusiness.com", "support@nishavbusiness.com"],
       "address": [
         {
           "@type": "PostalAddress",
-          "streetAddress": "123 Business Avenue, Suite 200",
-          "addressLocality": "New York",
-          "addressRegion": "NY",
-          "postalCode": "10001",
+          "streetAddress": "30 North Gould Street, Suite R",
+          "addressLocality": "Sheridan",
+          "addressRegion": "Wyoming",
+          "postalCode": "82801",
           "addressCountry": "US"
         },
         {
@@ -71,7 +104,7 @@
           "addressCountry": "IN"
         }
       ],
-      "openingHours": "Mo,Tu,We,Th,Fr 10:00-19:00",
+      "openingHours": ["Mo,Tu,We,Th,Fr 10:00-19:00", "Sa 10:00-14:00"],
       "priceRange": "$$$",
       "sameAs": [
         "https://www.facebook.com/nishavbusiness",
@@ -124,16 +157,16 @@
 <body>
   <div id="root"></div>
   <!-- Preload critical resources -->
-  <link rel="preload" href="css/min/nishav-styles.min.css" as="style">
-  <link rel="preload" href="js/min/nishav-utilities.min.js" as="script">
+  <link rel="preload" href="/nishav.github.io/css/min/nishav-styles.min.css" as="style">
+  <link rel="preload" href="/nishav.github.io/js/min/nishav-utilities.min.js" as="script">
   
   <!-- Minified external CSS -->
-  <link rel="stylesheet" href="css/min/nishav-styles.min.css">
+  <link rel="stylesheet" href="/nishav.github.io/css/min/nishav-styles.min.css">
   
   <!-- Main application script -->
   <script type="module" src="/src/main.tsx"></script>
   
   <!-- Minified utilities script -->
-  <script defer src="js/min/nishav-utilities.min.js"></script>
+  <script defer src="/nishav.github.io/js/min/nishav-utilities.min.js"></script>
 </body>
 </html>
