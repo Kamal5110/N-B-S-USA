@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet';
 import ContactForm from "@/components/contact/ContactForm";
 import CTASection from "@/components/home/CTASection";
+import GoogleMap from "@/components/common/GoogleMap";
 
 const Contact = () => {
   return (
@@ -164,10 +165,12 @@ const Contact = () => {
             <h2 id="locations-heading" className="text-3xl font-bold text-[var(--primary)] text-center mb-12">Our Locations</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-                <div className="h-64 bg-gray-300 relative rounded-lg mb-6">
-                  <div className="absolute inset-0 flex items-center justify-center bg-[var(--primary)]/10">
-                    <i className="fas fa-map-marked-alt text-5xl text-[var(--primary)]" aria-hidden="true"></i>
-                  </div>
+                <div className="h-64 relative rounded-lg mb-6">
+                  <GoogleMap 
+                    address="30 North Gould Street, Suite R, Sheridan, Wyoming 82801, USA" 
+                    height="100%" 
+                    className="rounded-lg"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-[var(--primary)] mb-3">US Office</h3>
                 <address className="text-[var(--darkgray)] not-italic mb-4">
@@ -182,10 +185,12 @@ const Contact = () => {
               </div>
               
               <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-                <div className="h-64 bg-gray-300 relative rounded-lg mb-6">
-                  <div className="absolute inset-0 flex items-center justify-center bg-[var(--primary)]/10">
-                    <i className="fas fa-map-marked-alt text-5xl text-[var(--primary)]" aria-hidden="true"></i>
-                  </div>
+                <div className="h-64 relative rounded-lg mb-6">
+                  <GoogleMap 
+                    address="Office No. - 2, 2B Darmanagar, Nr. BOB Bank, Sabarmati, Ahmedabad, Gujarat 380005, India" 
+                    height="100%"
+                    className="rounded-lg"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-[var(--primary)] mb-3">India Office</h3>
                 <address className="text-[var(--darkgray)] not-italic mb-4">

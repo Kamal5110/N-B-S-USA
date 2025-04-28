@@ -1,16 +1,18 @@
 import { Helmet } from 'react-helmet';
-import { Link } from "wouter";
+import { Link } from 'wouter';
 import BookingForm from "@/components/booking/BookingForm";
+import GoogleMap from "@/components/common/GoogleMap";
 
 const BookMeeting = () => {
   return (
     <>
       <Helmet>
-        <title>Book a Consultation | Nishav Business Solutions</title>
-        <meta name="description" content="Schedule a meeting with our accounting experts to discuss your business needs and get a personalized assessment of our offshore services." />
-        <meta name="keywords" content="book accounting consultation, schedule meeting, accounting assessment, CPA firm consultation, offshore accounting meeting" />
+        <title>Book a Meeting - Nishav Business Solutions</title>
+        <meta name="description" content="Schedule a consultation with Nishav Business Solutions. We offer expert accounting & bookkeeping services for US CPA firms at affordable rates." />
+        <meta name="keywords" content="booking accounting consultation, book CPA meeting, accounting consultation, schedule financial consultation" />
         <link rel="canonical" href="https://nishavbusiness.com/book-meeting" />
       </Helmet>
+
       {/* Page Header */}
       <section className="bg-[var(--primary)] py-20" aria-labelledby="booking-page-heading">
         <div className="container mx-auto px-4 text-center">
@@ -74,9 +76,59 @@ const BookMeeting = () => {
           </div>
         </div>
       </section>
+
+      {/* Our Locations Section */}
+      <section className="py-16 bg-white" aria-labelledby="locations-heading">
+        <div className="container mx-auto px-4">
+          <h2 id="locations-heading" className="text-3xl font-bold text-[var(--primary)] text-center mb-12">
+            Visit Our Offices
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+              <div className="h-64 relative rounded-lg mb-6">
+                <GoogleMap 
+                  address="30 North Gould Street, Suite R, Sheridan, Wyoming 82801, USA" 
+                  height="100%"
+                  className="rounded-lg"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-[var(--primary)] mb-3">US Office</h3>
+              <address className="text-[var(--darkgray)] not-italic mb-4">
+                30 North Gould Street, Suite R<br />
+                Sheridan, Wyoming 82801, (USA)
+              </address>
+              <p className="text-[var(--darkgray)]">
+                <a href="tel:+19172452515" className="hover:text-[var(--accent)] transition duration-300">
+                  <i className="fas fa-phone-alt mr-2"></i>+1 (917) 245-2515
+                </a>
+              </p>
+            </div>
+            
+            <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+              <div className="h-64 relative rounded-lg mb-6">
+                <GoogleMap 
+                  address="Office No. - 2, 2B Darmanagar, Nr. BOB Bank, Sabarmati, Ahmedabad, Gujarat 380005, India" 
+                  height="100%"
+                  className="rounded-lg"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-[var(--primary)] mb-3">India Office</h3>
+              <address className="text-[var(--darkgray)] not-italic mb-4">
+                Office No. - 2, 2B Darmanagar, Nr. BOB Bank<br />
+                Sabarmati, Ahmedabad, Gujarat - 380005
+              </address>
+              <p className="text-[var(--darkgray)]">
+                <a href="tel:+919649410824" className="hover:text-[var(--accent)] transition duration-300">
+                  <i className="fas fa-phone-alt mr-2"></i>+(91) - 9649410824
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-white" aria-labelledby="why-choose-heading">
+      <section className="py-20 bg-[var(--lightgray)]" aria-labelledby="why-choose-heading">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 id="why-choose-heading" className="text-3xl md:text-4xl font-bold text-[var(--primary)] mb-4">
@@ -90,7 +142,7 @@ const BookMeeting = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             {/* Benefit 1 */}
-            <div className="bg-[var(--lightgray)] p-8 rounded-lg shadow-md text-center">
+            <div className="bg-white p-8 rounded-lg shadow-md text-center">
               <div className="bg-[var(--primary)]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-user-tie text-2xl text-[var(--primary)]"></i>
               </div>
@@ -103,7 +155,7 @@ const BookMeeting = () => {
             </div>
             
             {/* Benefit 2 */}
-            <div className="bg-[var(--lightgray)] p-8 rounded-lg shadow-md text-center">
+            <div className="bg-white p-8 rounded-lg shadow-md text-center">
               <div className="bg-[var(--primary)]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-hand-holding-usd text-2xl text-[var(--primary)]"></i>
               </div>
@@ -116,7 +168,7 @@ const BookMeeting = () => {
             </div>
             
             {/* Benefit 3 */}
-            <div className="bg-[var(--lightgray)] p-8 rounded-lg shadow-md text-center">
+            <div className="bg-white p-8 rounded-lg shadow-md text-center">
               <div className="bg-[var(--primary)]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-headset text-2xl text-[var(--primary)]"></i>
               </div>
@@ -132,7 +184,7 @@ const BookMeeting = () => {
       </section>
       
       {/* Testimonial Section */}
-      <section className="py-20 bg-[var(--lightgray)]" aria-labelledby="testimonial-heading">
+      <section className="py-20 bg-white" aria-labelledby="testimonial-heading">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 id="testimonial-heading" className="text-3xl md:text-4xl font-bold text-[var(--primary)] mb-4">
@@ -141,7 +193,7 @@ const BookMeeting = () => {
             <div className="w-20 h-1 bg-[var(--accent)] mx-auto mb-6"></div>
           </div>
           
-          <div className="bg-white p-8 md:p-12 rounded-lg shadow-lg max-w-4xl mx-auto">
+          <div className="bg-[var(--lightgray)] p-8 md:p-12 rounded-lg shadow-lg max-w-4xl mx-auto">
             <div className="text-[var(--accent)] mb-6 text-center">
               <i className="fas fa-star"></i>
               <i className="fas fa-star"></i>
@@ -157,8 +209,8 @@ const BookMeeting = () => {
                 <i className="fas fa-user text-[var(--primary)]"></i>
               </div>
               <div>
-                <h4 className="font-bold text-[var(--primary)]">Arjun Singh</h4>
-                <p className="text-sm text-[var(--darkgray)]">Founder & CEO, Maintedge Techlabs</p>
+                <h4 className="font-bold text-[var(--primary)]">Robert Thompson</h4>
+                <p className="text-sm text-[var(--darkgray)]">CEO, Thompson Innovations</p>
               </div>
             </div>
           </div>
@@ -193,7 +245,7 @@ const BookMeeting = () => {
               </Link>
               <a 
                 href="tel:+19172452515"
-                className="bg-[var(--accent)] text-[var(--primary)] px-8 py-3 rounded-md font-bold hover:bg-[var(--accent)]/90 transition duration-300 shadow-md"
+                className="bg-[var(--accent)] text-white px-8 py-3 rounded-md font-bold hover:bg-[var(--accent)]/90 transition duration-300 shadow-md"
               >
                 Call Now
               </a>

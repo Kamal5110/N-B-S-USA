@@ -8,6 +8,7 @@ import ProcessSection from "@/components/home/ProcessSection";
 import CoreValuesSection from "@/components/home/CoreValuesSection";
 import PricingBanner from "@/components/home/PricingBanner";
 import ContactForm from "@/components/contact/ContactForm";
+import GoogleMap from "@/components/common/GoogleMap";
 import { testimonials } from "@/lib/data";
 
 // Lazy loaded components for better performance
@@ -164,10 +165,11 @@ const Home = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {/* US Office */}
             <div className="bg-white rounded-xl shadow-md overflow-hidden">
-              <div className="h-48 bg-gray-300 relative">
-                <div className="absolute inset-0 flex items-center justify-center bg-primary/10">
-                  <i className="fas fa-map-marked-alt text-5xl text-primary" aria-hidden="true"></i>
-                </div>
+              <div className="h-48 relative">
+                <GoogleMap 
+                  address="30 North Gould Street, Suite R, Sheridan, Wyoming 82801, USA" 
+                  height="100%" 
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-primary">US Office</h3>
@@ -185,10 +187,11 @@ const Home = () => {
             
             {/* India Office */}
             <div className="bg-white rounded-xl shadow-md overflow-hidden">
-              <div className="h-48 bg-gray-300 relative">
-                <div className="absolute inset-0 flex items-center justify-center bg-primary/10">
-                  <i className="fas fa-map-marked-alt text-5xl text-primary" aria-hidden="true"></i>
-                </div>
+              <div className="h-48 relative">
+                <GoogleMap 
+                  address="Office No. - 2, 2B Darmanagar, Nr. BOB Bank, Sabarmati, Ahmedabad, Gujarat 380005, India" 
+                  height="100%" 
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-primary">India Office</h3>
